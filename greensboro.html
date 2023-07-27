@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>GREENSBORO</title>
+    <style>
+      .line{
+        width: 80%;
+        top: 69px;
+        position: absolute;
+        border-bottom: 3px solid blueviolet;
+       
+       }
+       .siz{
+        height: 10px;
+        width: 100%;
+       
+       }
+       .dot {
+          height: 9px;
+          width: 9px;
+          background-color:blueviolet;
+          border-radius: 50%;
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="row" style="display: flex; margin: 0; padding: 10px;">
+        <div class="col-2">
+            <img style="width: 100%;max-width: 110px;"
+          src="data:image/png;base64,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" />
+        </div>
+        <div class="col-10">
+            <div class="row" style="display: flex;">
+                <div class="col-8"><h1 style="letter-spacing: 2px; font-family: sans-serif">GREENSBORO DISCOUNT</h1></div>
+                <div class="col-3"><h4 style="color: blue; float: right;"><i>Account Payables</i></h4></div>
+            </div>
+            <div style="display:flex;">
+              <div class="dot"></div>
+              <div class="line"></div>
+            </div>
+            <div class="col-12" style="display: flex;">
+                <div class="col-8" style="color: blue;">163 BLUE BELL RD<BR>GREENSBORO, NC 27406</div>
+                <div class="col-4" style="color: blue; float:right;">TEL:(336) 275-2613<br>FAX:(336)275-2614</div>
+            </div>
+        </div>
+    </div>
+   
+             <div style="padding: 10px;">
+            <table class="siz">
+                <thead style="border-bottom: 2px solid blue">
+                    <th scope="col" style="color: blue;"><i>Supplier</i></th>
+                    <th scope="col" style="color: blue; width: 15%;"><i>P.O. Number</i></th>
+                    <th scope="col" style="color: blue;"><i>Inv Number</i></th>
+                    <th scope="col" style="color: blue;"><i>P.O. Date</i></th>
+                    <th scope="col" style="color: blue;"><i>Received Date</i></th>
+                    <th scope="col" style="color: blue;"><i>Amount</i></th>
+                    <th scope="col" style="color: blue;"><i>Balance</i></th>
+                  </tr>
+                </thead>
+                <tbody class="siz">
+                  <tr>
+                    <td style="color: blue;"><i>101</i></td>
+                    <th ><i>ITG BRANDS / OTP</i></th>
+                   
+                  </tr>
+                  <tr >
+                    <td></td>
+                    <td style="border: 1px solid black; ">0506232-3</td>
+                    <td style="border: 1px solid black;">92181125</td>
+                    <td style="border: 1px solid black; ">5/3/2023</td>
+                    <td style="border: 1px solid black; ">5/5/2023</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0506232-3</td>
+                    <td style="border: 1px solid black; ">92181125</td>
+                    <td style="border: 1px solid black; ">5/3/2023</td>
+                    <td style="border: 1px solid black; ">5/5/2023</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0506232-3</td>
+                    <td style="border: 1px solid black; ">92181125</td>
+                    <td style="border: 1px solid black; ">5/3/2023</td>
+                    <td style="border: 1px solid black; ">5/5/2023</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0506232-3</td>
+                    <td style="border: 1px solid black; ">92181125</td>
+                    <td style="border: 1px solid black; ">5/3/2023</td>
+                    <td style="border: 1px solid black; ">5/5/2023</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0506232-3</td>
+                    <td style="border: 1px solid black; ">92181125</td>
+                    <td style="border: 1px solid black; ">5/3/2023</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                    <td style="border: 1px solid black; ">$8,783.70</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue;"><i>104</i></td>
+                    <th ><i>BAGS DIRECT INC</i></th>
+                   
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0506232-2</td>
+                    <td style="border: 1px solid black; ">45286</td>
+                    <td style="border: 1px solid black; ">5/4/2023</td>
+                    <td style="border: 1px solid black; ">5/5/2023</td>
+                    <td style="border: 1px solid black; ">$5,771.00</td>
+                    <td style="border: 1px solid black; ">$5,771.00</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue;"><i>114</i></td>
+                    <th ><i>FLEMING CANDY CO, INC</i></th>
+                   
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue;"><i>117</i></td>
+                    <th ><i>GOOD TIMES USA, LLC</i></th>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue;"><i>122</i></td>
+                    <th ><i>LIVING ESSENTIALS</i></th>
+                   
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue;"><i>123</i></td>
+                    <th ><i>MASTER CREATIONS, INC</i></th>
+                   
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue;"><i>127</i></td>
+                    <th ><i>NHA, INC</i></th>
+                   
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="border: 1px solid black; ">0520231-8</td>
+                    <td style="border: 1px solid black; ">1581-40</td>
+                    <td style="border: 1px solid black; ">5/16/2023</td>
+                    <td style="border: 1px solid black; ">5/18/2023</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                    <td style="border: 1px solid black; ">$12,921.10</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+  
+    
+</body>
+</html>
